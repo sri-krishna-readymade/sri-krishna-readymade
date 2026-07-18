@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sri Krishna Readymade</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+header{
+background:#003366;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+header a{
+color:white;
+text-decoration:none;
+margin:10px;
+}
+
+h1,h2{
+text-align:center;
+}
+
+.search{
+text-align:center;
+padding:20px;
+background:white;
+}
+
+#searchBox{
+width:80%;
+max-width:400px;
+padding:12px;
+font-size:18px;
+}
+
+.products{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:30px;
+}
+
+.product{
+background:white;
+width:220px;
+padding:15px;
+border-radius:10px;
+box-shadow:0 0 10px #ddd;
+text-align:center;
+}
+
+.product img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+button{
+background:#003366;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2 style="color:#FFD700;">Sri Krishna Readymade</h2>
+
+<nav>
+<a href="#">Home</a>
+<a href="men.html">Men</a>
+<a href="women.html">Women</a>
+<a href="#">Kids</a>
+<a href="#">📞9563584936</a>
+</nav>
+
+</header>
+
+<section style="padding:40px;text-align:center;">
+<h1>Welcome to Sri Krishna Readymade</h1>
+<p>Latest Fashion Collection for Men, Women & Kids</p>
+</section>
+
+<div class="search">
+<input
+type="text"
+id="searchBox"
+placeholder="Search products..."
+onkeyup="searchProduct()">
+</div>
+
+<h2>Products</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="man.jpg">
+<h3>Men's Wear</h3>
+<p>Starting ₹499</p>
+<a href="men.html">
+<button>View</button>
+</a>
+</div>
+
+<div class="product">
+<img src="women.jpg">
+<h3>Women's Wear</h3>
+<p>Starting ₹699</p>
+<a href="women.html">
+<button>View</button>
+</a>
+</div>
+
+<div class="product">
+<img src="cotton shirt.jpg">
+<h3>Cotton Shirt</h3>
+<p>₹799</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="lower.jpg">
+<h3>Lower</h3>
+<p>₹399</p>
+<button>Add to Cart</button>
+</div>
+
+</div>
+
+<script>
+function searchProduct() {
+
+let input = document.getElementById("searchBox").value.toLowerCase();
+
+let products = document.getElementsByClassName("product");
+
+for (let i = 0; i < products.length; i++) {
+
+let text = products[i].innerText.toLowerCase();
+
+if (text.includes(input)) {
+products[i].style.display = "block";
+} else {
+products[i].style.display = "none";
+}
+
+}
+
+}
+</script>
+
+</body>
+</html>
