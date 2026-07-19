@@ -84,8 +84,33 @@ function placeOrder() {
 </script>
 
 <nav>
-<a href="success.html">order</a>
-<h3>Order</h3>
 <a href="success.html">
-<button>order</button>
+    <button 
+    oneclick="<script>
+function placeOrder() {
+
+    // Open UPI payment
+    window.location.href = "upi://pay?pa=9832531506@pthdfc&pn=Sri%20Krishna%20Readymade&am=699&cu=INR";
+
+    // Wait 5 seconds
+    setTimeout(function () {
+
+        // Send Telegram message
+        fetch("https://api.telegram.org/bot8729233948:AAF2NysJvNOdblLPBYCCS_6gdQxUPcwzM7E/sendMessage", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                chat_id: "5001658449",
+                text: "🛍️ New Order Received!"
+            })
+        });
+
+        // Open success page
+        window.location.href = "success.html";
+
+    }, 5000);
+}
+</script>">placeOrder</button>
 </a>
