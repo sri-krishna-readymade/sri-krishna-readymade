@@ -83,30 +83,9 @@ function placeOrder() {
 }
 </script>
 
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let address=document.getElementById("address").value;
-
-if(name=="" || phone=="" || address==""){
-alert("Please fill all details.");
-return;
-}
-
-let payment=document.querySelector('input[name="payment"]:checked').value;
-
-if(payment=="cod"){
-
-window.location.href="success.html";
-
-}else{
-
-window.location.href="upi://pay?pa=YOURUPIID@paytm&pn=Sri%20Krishna%20Readymade&am=699&cu=INR";
-
-}
-
-}
-
-</script>
-
-</body>
-</html>
+<nav>
+<a href="success.html">order</a>
+<h3>Order</h3>
+<a href="success.html">
+<button>order</button>
+</a>
